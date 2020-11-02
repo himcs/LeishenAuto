@@ -9,7 +9,7 @@ const Secrets = {
 
 function start(username, password) {
     if (!username || !password) {
-        console.log("empty username or password");
+        console.log("Empty username or password");
         return;
     }
     const user = {
