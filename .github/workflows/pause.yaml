@@ -1,6 +1,9 @@
 name: 雷神自动停止加速
 
-on: [push]
+on:
+  push:
+  schedule:
+    - cron: '0 16 * * *'
 
 jobs:
   build:
