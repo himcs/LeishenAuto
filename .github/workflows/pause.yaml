@@ -3,6 +3,7 @@ name: 雷神自动停止加速
 on:
   push:
   schedule:
+   # 定时任务，北京时间24点执行任务 16 + 8 = 24
     - cron: '0 16 * * *'
 
 jobs:
@@ -17,7 +18,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: "运行 【暂停】"
+      - name: "雷神加速器暂停脚本"
         run: |
           node main.js
         env:
