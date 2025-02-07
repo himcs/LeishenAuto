@@ -7,7 +7,7 @@ on:
     - cron: '0 16 * * *'
 
 jobs:
-  build:
+  pause:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -22,5 +22,4 @@ jobs:
         run: |
           node main.js
         env:
-          LEISHEN_USERNAME: ${{ secrets.LEISHEN_USERNAME }}
-          LEISHEN_PASSWORD: ${{ secrets.LEISHEN_PASSWORD }}
+          LEISHEN_ACCOUNT_TOKEN: ${{ secrets.LEISHEN_ACCOUNT_TOKEN }}

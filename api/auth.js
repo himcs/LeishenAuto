@@ -1,13 +1,5 @@
 const request = require('../utils/request');
 
-function login(data) {
-    return request({
-        url: '/api/auth/login/v1',
-        method: 'post',
-        data
-    })
-}
-
 function pause(data) {
     return request({
         url: '/api/user/pause',
@@ -16,4 +8,4 @@ function pause(data) {
     })
 }
 
-module.exports = {login, pause}
+module.exports = {pause}
